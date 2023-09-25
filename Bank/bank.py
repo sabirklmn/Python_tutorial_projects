@@ -15,8 +15,26 @@ class Bank:
 
     #deposit
     def deposit(self,amount):
+            
+        
         self.balance=self.balance+amount
+            
         print(f'{amount} deposted succesfully')
+
+
+    #withdraw
+    def withdraw(self,amount):
+        if amount<self.balance:
+            self.balance=self.balance-amount
+            print(f'{amount} withdraw succesfully')
+        else:
+            print('Insufficent Fund...')
+
+
+    #ministatement
+    def minisatement(self):
+        print(f' Your account balance is {self.balance}')
+
 
 print(f'Welcome to {Bank.bankname} , {Bank.branch}')
 username=input('Enter your name: ')
@@ -36,7 +54,15 @@ while True:
         amount=float(input('Enter Deposited amount : '))
 
         b.deposit(amount)
+    if option==2:
+        amount=float(input('Enter Withdraw amount: '))
+        b.withdraw(amount)
+    
+    if option==3
+        b.minisatement()
 
     if option==4:
         print("Thanks for using Indian Expreess Bank... ")
         break
+    else:
+        print('Invaild option plz select a vaild option')
