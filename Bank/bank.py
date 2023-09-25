@@ -58,7 +58,7 @@ while True:
         amount=float(input('Enter Withdraw amount: '))
         b.withdraw(amount)
     
-    if option==3
+    if option==3:
         b.minisatement()
 
     if option==4:
