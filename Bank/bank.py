@@ -10,14 +10,33 @@ class Bank:
         self.username=username
         self.pan=pan
         self.address=address
-       # self.balance=0.0
+        self.balance=0.0
         print(f'Hello {self.username}cong! your account created succesfully')
 
+    #deposit
+    def deposit(self,amount):
+        self.balance=self.balance+amount
+        print(f'{amount} deposted succesfully')
 
-
+print(f'Welcome to {Bank.bankname} , {Bank.branch}')
 username=input('Enter your name: ')
 pan=input('Enter Pan card number: ')
 address=input('Enter Your address: ')
 
 
 b=Bank(username,pan,address)
+
+
+while True:
+    print('Please Selecte any Option : ')
+    print('1.Deposit\n2.Withdraw\n3.Ministatement\n44.Stop')
+    option=int(input(''))
+
+    if option==1:
+        amount=float(input('Enter Deposited amount : '))
+
+        b.deposit(amount)
+
+    if option==4:
+        print("Thanks for using Indian Expreess Bank... ")
+        break
