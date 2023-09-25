@@ -47,7 +47,7 @@ b=Bank(username,pan,address)
 
 while True:
     print('Please Selecte any Option : ')
-    print('1.Deposit\n2.Withdraw\n3.Ministatement\n44.Stop')
+    print('1.Deposit\n2.Withdraw\n3.Ministatement\n4.Stop')
     option=int(input(''))
 
     if option==1:
